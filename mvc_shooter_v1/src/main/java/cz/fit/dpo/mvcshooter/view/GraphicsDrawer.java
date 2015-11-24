@@ -19,7 +19,6 @@ public class GraphicsDrawer implements IVisitor {
 
 	private Graphics graphics;
 
-
 	private BufferedImage cannonImage;
 	private BufferedImage enemyImage1;
 	private BufferedImage enemyImage2;
@@ -42,6 +41,7 @@ public class GraphicsDrawer implements IVisitor {
 	}
 
 	public void drawCannon(Graphics g, Cannon cannon) {
+		System.out.println("Drawing cannon x=" + cannon.getX());
 		g.drawImage(cannonImage, cannon.getX() - cannonImage.getWidth() / 2,
 				cannon.getY() - cannonImage.getHeight() / 2, null);
 	}

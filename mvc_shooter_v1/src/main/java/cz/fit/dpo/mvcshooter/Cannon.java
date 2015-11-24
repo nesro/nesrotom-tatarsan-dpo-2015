@@ -1,12 +1,9 @@
 package cz.fit.dpo.mvcshooter;
 
-/**
- *
- * @author Ondrej Stuchlik
- */
 public class Cannon extends GameObject {
 
 	public Cannon() {
+		//System.out.println("Cannon contructor");
 		this.x = 100;
 		this.y = 100;
 	}
@@ -20,7 +17,6 @@ public class Cannon extends GameObject {
 	}
 
 	public void moveUp() {
-		System.out.println("cannon moves up");
 		this.y -= 5;
 	}
 

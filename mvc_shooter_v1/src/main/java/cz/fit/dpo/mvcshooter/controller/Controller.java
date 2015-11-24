@@ -16,11 +16,11 @@ public class Controller {
 		switch (evt.getKeyCode()) {
 		case KeyEvent.VK_UP:
 			model.moveCannonUp();
-			System.out.println("up!");
+			//System.out.println("up!");
 			break;
 		case KeyEvent.VK_DOWN:
 			model.moveCannonDown();
-			System.out.println("down!");
+			//System.out.println("down!");
 			break;
 		default:
 			break;

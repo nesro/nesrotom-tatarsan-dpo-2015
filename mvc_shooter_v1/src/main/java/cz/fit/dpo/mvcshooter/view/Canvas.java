@@ -34,14 +34,14 @@ public class Canvas extends JPanel implements IObserver {
 	}
 
 	public void update() {
-		System.out.println("Canvas updated!");
+		//System.out.println("Canvas updated!");
 		repaint();
 	}
 
 	@Override
 	protected void paintComponent(Graphics g) {
 		super.paintComponent(g);
-		drawer.drawCannon(g, new Cannon());
+		drawer.drawCannon(g, this.model.cannon);
 	}
 
 }
