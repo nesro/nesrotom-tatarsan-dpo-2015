@@ -8,7 +8,7 @@ public class Controller {
 	private Model model;
 	
 	public Controller(Model m) {
-		System.out.println("controller contructor");
+		//System.out.println("controller contructor");
 		this.model = m;
 	}
 	

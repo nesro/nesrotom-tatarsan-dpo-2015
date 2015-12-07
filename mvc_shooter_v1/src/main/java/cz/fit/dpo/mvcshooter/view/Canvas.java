@@ -18,18 +18,18 @@ public class Canvas extends JPanel implements IObserver {
 	
 	Model model;
 	Graphics graphics;
+	GraphicsDrawer drawer;
 
-	GraphicsDrawer drawer = new GraphicsDrawer(graphics);
-
-	public Canvas(int x, int y, int width, int height, Model m) {
+	public Canvas(int x, int y, int width, int height, Model m, Graphics graphics) {
 		this.setBackground(Color.WHITE);
 		this.setDoubleBuffered(true);
 		this.setLocation(x, y);
 		this.setPreferredSize(new Dimension(width, height));
 		this.setVisible(true);
 		this.model = m;
+		this.graphics = graphics;
+		this.drawer = new GraphicsDrawer(graphics);
 		
-		/* tohle asi neni dobre */
 		this.model.attach(this);
 	}
 
@@ -41,6 +41,10 @@ public class Canvas extends JPanel implements IObserver {
 	@Override
 	protected void paintComponent(Graphics g) {
 		super.paintComponent(g);
+		System.out.println("paintComponent");
+		
+		this.model.cannon.accept(this.drawer);
+		
 		drawer.drawCannon(g, this.model.cannon);
 	}
 

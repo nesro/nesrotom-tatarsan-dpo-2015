@@ -9,6 +9,5 @@ public class GameObject implements IVisitable {
 	@Override
 	public void accept(IVisitor visitor) {
 		// TODO Auto-generated method stub
-		
 	}
 }

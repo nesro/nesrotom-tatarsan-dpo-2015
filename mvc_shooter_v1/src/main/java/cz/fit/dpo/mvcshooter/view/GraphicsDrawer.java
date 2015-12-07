@@ -28,6 +28,7 @@ public class GraphicsDrawer implements IVisitor {
 	public GraphicsDrawer(Graphics graphics) {
 		try {
 
+			if (graphics == null) { System.out.println("graphicsdrawer has null graphics"); }
 			this.graphics = graphics;
 
 			cannonImage = ImageIO.read(getClass().getResourceAsStream("/images/cannon.png"));
@@ -41,9 +42,20 @@ public class GraphicsDrawer implements IVisitor {
 	}
 
 	public void drawCannon(Graphics g, Cannon cannon) {
-		System.out.println("Drawing cannon x=" + cannon.getX());
-		g.drawImage(cannonImage, cannon.getX() - cannonImage.getWidth() / 2,
-				cannon.getY() - cannonImage.getHeight() / 2, null);
+		//System.out.println("Drawing cannon x=" + cannon.getX());
+		if (cannon == null) { System.out.println("cannon is null"); }
+		if (cannon != null) { System.out.println("cannon y " + cannon.getY()); }
+		if (g == null) { System.out.println("g is null"); }
+		if (cannonImage == null) { System.out.println("cannonImage is null"); }
+		if (this.graphics == null) { System.out.println("graphics is null"); }
+		
+		System.out.println("drawing cannon at y="+cannon.getY());
+		
+		g.drawImage(
+				cannonImage,
+				cannon.getX() - cannonImage.getWidth() / 2,
+				cannon.getY() - cannonImage.getHeight() / 2,
+				null);
 	}
 
 	/* tohle budu volat pri visit */
@@ -78,7 +90,12 @@ public class GraphicsDrawer implements IVisitor {
 
 	@Override
 	public void visitCannon(Cannon cannon) {
-		// TODO Auto-generated method stub
+		/* FIXME TODO */
+		/* FIXME TODO */
+		/* FIXME TODO */
+		/* FIXME TODO */
+		System.out.println("visit Cannon");
+		if (this.graphics == null) { System.out.println("this gr is null"); }
 		drawCannon(this.graphics, cannon);
 	}
 

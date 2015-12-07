@@ -3,7 +3,6 @@ package cz.fit.dpo.mvcshooter;
 public class Cannon extends GameObject {
 
 	public Cannon() {
-		//System.out.println("Cannon contructor");
 		this.x = 100;
 		this.y = 100;
 	}
@@ -25,6 +24,7 @@ public class Cannon extends GameObject {
 	}
 
 	public void accept(IVisitor visitor) {
+		System.out.println("Cannon accept");
 		visitor.visitCannon(this);
 	}
 }
