@@ -11,8 +11,6 @@ import java.util.Iterator;
  * Represents number in the arithmetic expression
  */
 
-// LEAF
-
 public class NumericOperand implements ArithmeticExpression {
 
     private Integer value;

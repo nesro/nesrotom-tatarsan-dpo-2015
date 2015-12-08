@@ -17,7 +17,7 @@ public class InOrderIterator implements Iterator<ExpressionElement> {
 		elements = new ArrayList<ExpressionElement>();
 		position = 0;
 
-		// open bracet
+		// open bracket
 		elements.add(new OpenBracketOperation());
 
 		/* left subtree */

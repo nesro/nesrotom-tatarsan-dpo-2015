@@ -7,8 +7,6 @@ import cz.fit.dpo.cbi.arithmetic.elements.ExpressionElement;
  * Represents + operation
  */
 
-// COMPOSITE
-
 public class AddOperator extends BinaryOperator {
 
 	public AddOperator(ArithmeticExpression fOp, ArithmeticExpression sOp) {

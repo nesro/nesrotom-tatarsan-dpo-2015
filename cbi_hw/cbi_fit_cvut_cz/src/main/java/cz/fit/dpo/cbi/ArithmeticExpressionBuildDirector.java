@@ -9,11 +9,11 @@ public class ArithmeticExpressionBuildDirector {
 
 		for (String token : expString.split(" ")) {
 			switch (token) {
-			case "+":
-				builder.operationPlus();
-				break;
 			case "-":
 				builder.operationMinus();
+				break;
+			case "+":
+				builder.operationPlus();
 				break;
 			default:
 				builder.Number(Integer.parseInt(token));

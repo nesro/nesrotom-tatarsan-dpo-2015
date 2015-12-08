@@ -10,8 +10,6 @@ import java.util.Iterator;
  * Represents the Binary operations like + - etc.
  */
 
-// COMPOSITE
-
 public abstract class BinaryOperator implements ArithmeticExpression {
 
 	private ArithmeticExpression firstOperand;

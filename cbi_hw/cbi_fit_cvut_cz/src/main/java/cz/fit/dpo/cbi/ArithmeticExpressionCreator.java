@@ -4,7 +4,6 @@ import cz.fit.dpo.cbi.arithmetic.ArithmeticExpression;
 
 public class ArithmeticExpressionCreator {
 
-
     /**
      * Creates any expression from the RPN input.
      *

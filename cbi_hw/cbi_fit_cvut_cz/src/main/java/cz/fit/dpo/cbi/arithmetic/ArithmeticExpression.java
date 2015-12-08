@@ -4,8 +4,6 @@ import cz.fit.dpo.cbi.arithmetic.elements.ExpressionElement;
 
 import java.util.Iterator;
 
-// COMPONENT
-
 public interface ArithmeticExpression {
 
     public Integer evaluate();

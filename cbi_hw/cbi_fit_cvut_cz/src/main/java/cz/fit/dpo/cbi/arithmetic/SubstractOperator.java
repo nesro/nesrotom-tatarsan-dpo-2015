@@ -7,8 +7,6 @@ import cz.fit.dpo.cbi.arithmetic.elements.SubstractOperation;
  * Represents - operation
  */
 
-// COMPOSITE
-
 public class SubstractOperator extends BinaryOperator {
 
 	public SubstractOperator(ArithmeticExpression fOp, ArithmeticExpression sOp) {
