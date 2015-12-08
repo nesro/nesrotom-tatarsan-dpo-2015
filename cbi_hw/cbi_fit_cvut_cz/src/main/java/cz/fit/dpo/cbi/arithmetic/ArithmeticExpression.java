@@ -1,14 +1,18 @@
 package cz.fit.dpo.cbi.arithmetic;
 
-import java.util.Iterator;
-
 import cz.fit.dpo.cbi.arithmetic.elements.ExpressionElement;
 
-public abstract class ArithmeticExpression {
+import java.util.Iterator;
 
-    public abstract Integer evaluate();
-    
-    public abstract Iterator<ExpressionElement> getInOrderIterator();
+// COMPONENT
 
-    public abstract Iterator<ExpressionElement> getPostOrderIterator();
+public interface ArithmeticExpression {
+
+    public Integer evaluate();
+
+    public Iterator<ExpressionElement> getInOrderIterator();
+
+    public Iterator<ExpressionElement> getPostOrderIterator();
+
+    public ExpressionElement getExpressionElement();
 }

@@ -1,30 +1,27 @@
 package cz.fit.dpo.cbi.arithmetic;
 
 import cz.fit.dpo.cbi.arithmetic.elements.ExpressionElement;
-import java.util.Iterator;
+import cz.fit.dpo.cbi.arithmetic.elements.SubstractOperation;
 
 /**
  * Represents - operation
  */
+
+// COMPOSITE
+
 public class SubstractOperator extends BinaryOperator {
-    
-    public SubstractOperator(ArithmeticExpression firstOperand, ArithmeticExpression secondOperand) {
-        super(firstOperand, secondOperand);
-    }    
 
-    @Override
-    public Integer evaluate() {
-        throw new UnsupportedOperationException("Not supported yet."); 
-    }
+	public SubstractOperator(ArithmeticExpression fOp, ArithmeticExpression sOp) {
+		super(fOp, sOp);
+	}
 
-    @Override
-    public Iterator<ExpressionElement> getInOrderIterator() {
-        throw new UnsupportedOperationException("Not supported yet."); 
-    }
+	@Override
+	public Integer evaluate() {
+		return getFirstOperand().evaluate() - getSecondOperand().evaluate();
+	}
 
-    @Override
-    public Iterator<ExpressionElement> getPostOrderIterator() {
-        throw new UnsupportedOperationException("Not supported yet.");
-    }
-
+	@Override
+	public ExpressionElement getExpressionElement() {
+		return new SubstractOperation();
+	}
 }
